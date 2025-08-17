@@ -8,7 +8,7 @@ A solução é composta por:<br>
 - ✅ **Integração via pacote NuGet**, consumido pelo projeto WinForms.<br>
 - ✅ Código limpo, assíncrono (`async/await`), seguro e reutilizável.<br>
 <br>
-## 🧩 Tecnologias Utilizadas<br>
+## Tecnologias Utilizadas<br>
 - .NET 8<br>
 - Windows Forms<br>
 - ASP.NET Core Web API<br>
@@ -19,7 +19,7 @@ A solução é composta por:<br>
 - Visual Studio 2022<br>
 - NuGet (pacotes próprios e externos)<br>
 <br>
-## 📂 Estrutura da Solução<br>
+## Estrutura da Solução<br>
 /CRUD-WinForm-API<br>
 ├── CRUD.Model # Classes de domínio (Usuario, LoginModel, etc.)<br>
 ├── CRUD.Interface # Interfaces dos serviços<br>
@@ -28,14 +28,14 @@ A solução é composta por:<br>
 ├── CRUD.Client # Cliente HTTP (HttpClient wrapper) empacotado via NuGet<br>
 └── CRUD.WinForms # Interface do usuário (WinForms) que consome a API<br>
 <br>
-## 🔐 Autenticação<br>
+## Autenticação<br>
 A autenticação na API é realizada via JWT. O login é feito através da rota:<br>
 POST /api/auth/login<br>
 Body: { "usuario": "Admin", "senha": "Admin" }<br>
 O token retornado é incluído automaticamente no `Authorization Header` das chamadas subsequentes pelo `ApiCliente`.<br>
 <br>
 <br>
-## 📦 Integração via NuGet<br>
+## Integração via NuGet<br>
 A API cliente (`UsuarioApiClient`) foi empacotada como um pacote NuGet e adicionada ao projeto WinForms:<br>
 var http = new HttpClient { BaseAddress = new Uri("https://localhost:7058") };<br>
 var client = new UsuarioApiClient(http);<br>
